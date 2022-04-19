@@ -1,9 +1,10 @@
-import './Assests/Styles/App.css';
+import './Assests/css/App.css';
+import Country from './Components/Country';
 
 function App() {
   return (
     <div className="App">
-     
+      <Country />
     </div>
   );
 }
