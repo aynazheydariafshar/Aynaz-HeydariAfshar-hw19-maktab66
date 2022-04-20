@@ -1,9 +1,3 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -13,17 +7,17 @@
   padding: 1.5rem;
 }
 
-.light {
-  background-color: rgb(37, 39, 70);
+.light-nav {
+  background-color: rgb(55, 55, 75);
   color: white;
 }
 
-.dark {
+.dark-nav {
   background-color: white;
-  color: rgb(37, 39, 70);
+  color: rgb(55, 55, 75);
 }
 
-.light button {
+.light-nav button {
   background-color: transparent;
   border: 0;
   color: white;
@@ -31,16 +25,30 @@
   cursor: pointer;
 }
 
-.dark button {
+.dark-nav button {
   background-color: transparent;
   border: 0;
-  color: rgb(37, 39, 70);
+  color: rgb(55, 55, 75);
   margin: 0 15px;
   cursor: pointer;
 }
 
 .navbar button:hover {
   color: rgb(255, 0, 0);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.dark-app {
+  background-color: rgb(37, 39, 70);
+}
+
+.light-app {
+  background-color: white;
 }
 
 /*# sourceMappingURL=App.css.map */

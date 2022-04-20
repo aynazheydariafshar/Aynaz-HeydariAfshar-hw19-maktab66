@@ -1,4 +1,6 @@
 @import 'variable';
+@import 'navbar';
+@import 'variable';
 
 * {
     box-sizing: border-box;
@@ -6,42 +8,14 @@
     padding: 0;
 }
 
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: $shadow;
-    max-width: 100%;
-    padding: 1.5rem
-}
-
-.light{
+.dark-app{
     background-color: $dark-blue;
-    color: $light;
 }
 
-.dark{
+.light-app{
     background-color: $light;
-    color: $dark-blue;
 }
 
-.light button{
-    background-color: transparent;
-    border: 0;
-    color: $light;
-    margin: 0 15px;
-    cursor: pointer;
-}
 
-.dark button{
-    background-color: transparent;
-    border: 0;
-    color: $dark-blue;
-    margin: 0 15px;
-    cursor: pointer;
-}
 
-.navbar button:hover{
-    color: rgb(255, 0, 0);
-}
 

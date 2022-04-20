@@ -1,16 +1,21 @@
+import { useContext } from 'react';
 import './Assests/css/App.css';
 import Country from './Components/Country';
 import Navbar from './Components/Navbar';
-import { ThemeProvider } from './Components/ThemeContext';
+import { ThemeContext, ThemeProvider } from './Components/ThemeContext';
 
 function App() {
+
+  //change Theme
+  const {dark} = useContext(ThemeContext)
+
   return (
-    <div className='app'>
-      <ThemeProvider>
+    <ThemeProvider>
+      <div className={dark ?'light-app' : 'dark-app'}>
         <Navbar />
         <Country />
-      </ThemeProvider>
-    </div>
+      </div>
+    </ThemeProvider>
   );
 }
 

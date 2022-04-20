@@ -1,0 +1,41 @@
+@import 'variable';
+
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: $shadow;
+    max-width: 100%;
+    padding: 1.5rem
+}
+
+.light-nav{
+    background-color: $light-blue;
+    color: $light;
+}
+
+.dark-nav{
+    background-color: $light;
+    color: $light-blue;
+}
+
+.light-nav button{
+    background-color: transparent;
+    border: 0;
+    color: $light;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.dark-nav button{
+    background-color: transparent;
+    border: 0;
+    color: $light-blue;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.navbar button:hover{
+    color: rgb(255, 0, 0);
+}

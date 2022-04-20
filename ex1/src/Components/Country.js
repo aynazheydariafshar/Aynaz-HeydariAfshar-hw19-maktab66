@@ -5,6 +5,7 @@ const Country = () => {
 
     const [dataCountry , setdataCountry] = useState([])
 
+    //get data from json file
     useEffect(() => {
        axios.get('/json/Countries.json')
         .then(res => setdataCountry(res.data))
@@ -12,7 +13,7 @@ const Country = () => {
     console.log(dataCountry)
 
     return <div>
-        {dataCountry.map(item => <p>{item.name}</p>)}
+        
     </div>;
 }
 
