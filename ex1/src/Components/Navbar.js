@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import {FaMoon} from 'react-icons/fa';
+import { ThemeContext } from './ThemeContext';
 
 const Navbar = () => {
-    return <div>
-        <h1>Where is the World ?</h1>
+    const {dark , toggleDark} = useContext(ThemeContext)
+    return <div className={ dark ? 'navbar dark' : 'navbar light'}>
+        <h3>Where is the World ?</h3>
         <div>
-            <button>Dark Mode</button>
+            <FaMoon />
+            <button onClick={e => toggleDark(e,dark)}>Dark Mode</button>
         </div>
     </div>;
 }

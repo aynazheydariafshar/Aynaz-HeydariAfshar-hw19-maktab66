@@ -1,5 +1,46 @@
-.App {
-  background-color: rgb(255, 98, 98);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  max-width: 100%;
+  padding: 1.5rem;
+}
+
+.light {
+  background-color: rgb(37, 39, 70);
+  color: white;
+}
+
+.dark {
+  background-color: white;
+  color: rgb(37, 39, 70);
+}
+
+.light button {
+  background-color: transparent;
+  border: 0;
+  color: white;
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+.dark button {
+  background-color: transparent;
+  border: 0;
+  color: rgb(37, 39, 70);
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+.navbar button:hover {
+  color: rgb(255, 0, 0);
 }
 
 /*# sourceMappingURL=App.css.map */
