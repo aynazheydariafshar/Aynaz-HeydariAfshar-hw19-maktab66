@@ -20,8 +20,8 @@ function App() {
     <ThemeContext.Provider value={{dark , toggleDark}}>
       <div className={dark ?'light-app' : 'dark-app'}>
         <Navbar />
-        <Country />
         <Search />
+        <Country />
       </div>
     </ThemeContext.Provider>
   );

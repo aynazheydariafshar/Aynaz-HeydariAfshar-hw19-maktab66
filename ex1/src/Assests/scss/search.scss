@@ -5,11 +5,12 @@
 }
 
 input{
-    padding: 7px 40px;
+    padding: 10px 40px;
     margin: 30px;
-    width: 400px;
+    width: 40%;
     border: none;
     box-shadow: $shadow;
+    border-radius: 5px;
 }
 
 .s-dark input{
