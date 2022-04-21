@@ -2,6 +2,7 @@ import { useContext , useEffect , useState } from 'react';
 import './Assests/css/App.css';
 import Country from './Components/Country';
 import Navbar from './Components/Navbar';
+import Search from './Components/Search';
 import { ThemeContext, ThemeProvider } from './Components/ThemeContext';
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
       <div className={dark ?'light-app' : 'dark-app'}>
         <Navbar />
         <Country />
-        <h1>ddd</h1>
+        <Search />
       </div>
     </ThemeContext.Provider>
   );

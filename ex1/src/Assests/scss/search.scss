@@ -1,0 +1,27 @@
+@import 'variable';
+
+.search {
+    position: relative;
+}
+
+input{
+    padding: 7px 40px;
+    margin: 30px;
+    width: 400px;
+    border: none;
+    box-shadow: $shadow;
+}
+
+.s-dark input{
+    background-color: $light-blue;
+}
+
+.s-light input{
+    background-color: $light;
+}
+
+.icon-search{
+    position: absolute;
+    bottom: 38px;
+    left: 40px;
+}
