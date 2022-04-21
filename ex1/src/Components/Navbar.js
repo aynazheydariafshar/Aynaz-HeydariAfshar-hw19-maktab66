@@ -10,8 +10,8 @@ const Navbar = () => {
     return <div className={ dark ? 'navbar dark-nav' : 'navbar light-nav'}>
         <h3>Where is the World ?</h3>
         <div>
-            {dark ? <FaSun className='icon-theme'/> : <FaMoon />}
-            <button onClick={e => toggleDark(e,dark)}>Dark Mode</button>
+            {dark ? <FaMoon /> : <FaSun />}
+            <button onClick={e => toggleDark(e,dark)}>{dark ? 'Dark Mode' : 'Light Mode'}</button>
         </div>
     </div>;
 }

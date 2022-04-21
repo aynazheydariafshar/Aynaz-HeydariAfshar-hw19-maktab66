@@ -11,19 +11,19 @@
 }
 
 .light-nav{
-    background-color: $light-blue;
-    color: $light;
+    background-color: $light;
+    color: $black-text;
 }
 
 .dark-nav{
-    background-color: $light;
-    color: $light-blue;
+    background-color: $light-blue;
+    color: $light;
 }
 
 .light-nav button{
     background-color: transparent;
     border: 0;
-    color: $light;
+    color: $black-text;
     margin: 0 15px;
     cursor: pointer;
 }
@@ -31,7 +31,7 @@
 .dark-nav button{
     background-color: transparent;
     border: 0;
-    color: $light-blue;
+    color: $light;
     margin: 0 15px;
     cursor: pointer;
 }

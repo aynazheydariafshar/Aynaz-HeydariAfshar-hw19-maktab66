@@ -9,11 +9,13 @@
 }
 
 .dark-app{
-    background-color: $dark-blue;
+    background-color: $light;
+    color: $black-text;
 }
 
 .light-app{
-    background-color: $light;
+    background-color: $light-blue;
+    color: $light;
 }
 
 

@@ -8,19 +8,19 @@
 }
 
 .light-nav {
-  background-color: rgb(55, 55, 75);
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 .dark-nav {
-  background-color: white;
-  color: rgb(55, 55, 75);
+  background-color: rgb(55, 55, 75);
+  color: white;
 }
 
 .light-nav button {
   background-color: transparent;
   border: 0;
-  color: white;
+  color: black;
   margin: 0 15px;
   cursor: pointer;
 }
@@ -28,7 +28,7 @@
 .dark-nav button {
   background-color: transparent;
   border: 0;
-  color: rgb(55, 55, 75);
+  color: white;
   margin: 0 15px;
   cursor: pointer;
 }
@@ -44,11 +44,13 @@
 }
 
 .dark-app {
-  background-color: rgb(37, 39, 70);
+  background-color: white;
+  color: black;
 }
 
 .light-app {
-  background-color: white;
+  background-color: rgb(55, 55, 75);
+  color: white;
 }
 
 /*# sourceMappingURL=App.css.map */

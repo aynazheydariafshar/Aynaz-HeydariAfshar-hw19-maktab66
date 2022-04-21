@@ -10,7 +10,6 @@ const Country = () => {
        axios.get('/json/Countries.json')
         .then(res => setdataCountry(res.data))
     }, [dataCountry])
-    console.log(dataCountry)
 
     return <div>
         
