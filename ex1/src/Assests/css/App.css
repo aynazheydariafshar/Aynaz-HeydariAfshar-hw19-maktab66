@@ -109,10 +109,15 @@ input {
     height: 50%;
   }
 }
+@font-face {
+  font-family: Nunito;
+  src: url("https://fonts.google.com/specimen/Nunito+Sans");
+}
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: Nunito;
 }
 
 .dark-app {
