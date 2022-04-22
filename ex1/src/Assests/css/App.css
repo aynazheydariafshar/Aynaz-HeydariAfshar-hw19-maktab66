@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500&display=swap");
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -109,15 +110,11 @@ input {
     height: 50%;
   }
 }
-@font-face {
-  font-family: Nunito;
-  src: url("https://fonts.google.com/specimen/Nunito+Sans");
-}
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Nunito;
+  font-family: "Baloo Bhaijaan 2", cursive;
 }
 
 .dark-app {
