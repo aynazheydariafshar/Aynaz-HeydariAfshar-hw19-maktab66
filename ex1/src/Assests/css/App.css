@@ -2,25 +2,25 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 5px 8px 0px;
   max-width: 100%;
   padding: 1.5rem;
 }
 
 .light-nav {
-  background-color: white;
-  color: black;
+  background-color: hsl(0deg, 0%, 98%);
+  color: hsl(200deg, 15%, 8%);
 }
 
 .dark-nav {
-  background-color: rgb(53, 53, 82);
-  color: white;
+  background-color: hsl(209deg, 23%, 22%);
+  color: hsl(0deg, 0%, 98%);
 }
 
 .light-nav button {
   background-color: transparent;
   border: 0;
-  color: black;
+  color: hsl(200deg, 15%, 8%);
   margin: 0 15px;
   cursor: pointer;
 }
@@ -28,7 +28,7 @@
 .dark-nav button {
   background-color: transparent;
   border: 0;
-  color: white;
+  color: hsl(0deg, 0%, 98%);
   margin: 0 15px;
   cursor: pointer;
 }
@@ -46,16 +46,16 @@ input {
   margin: 30px;
   width: 40%;
   border: none;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 5px 8px 0px;
   border-radius: 5px;
 }
 
 .s-dark input {
-  background-color: rgb(53, 53, 82);
+  background-color: hsl(209deg, 23%, 22%);
 }
 
 .s-light input {
-  background-color: white;
+  background-color: hsl(0deg, 0%, 98%);
 }
 
 .icon-search {
@@ -82,7 +82,7 @@ input {
 }
 
 .card {
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 5px 8px 0px;
   transition: 0.3s;
   width: 20%;
   margin: 27px;
@@ -116,13 +116,13 @@ input {
 }
 
 .dark-app {
-  background-color: white;
-  color: black;
+  background-color: hsl(0deg, 0%, 98%);
+  color: hsl(200deg, 15%, 8%);
 }
 
 .light-app {
-  background-color: rgb(16, 18, 52);
-  color: white;
+  background-color: hsl(207deg, 26%, 17%);
+  color: hsl(0deg, 0%, 98%);
 }
 
 /*# sourceMappingURL=App.css.map */
