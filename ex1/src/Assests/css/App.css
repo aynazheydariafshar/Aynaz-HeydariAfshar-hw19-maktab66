@@ -90,6 +90,8 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-decoration: none;
+  color: inherit;
 }
 
 .card-style {

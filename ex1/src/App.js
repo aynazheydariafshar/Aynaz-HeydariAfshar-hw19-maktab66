@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar';
 import { ThemeContext } from './Components/ThemeContext';
 import axios from 'axios';
 import { Route, Routes } from 'react-router-dom';
+import CountryCards from './Components/CountryCards';
 
 
 function App() {
@@ -23,15 +24,16 @@ function App() {
   //get data from json file
   useEffect(() => {
     axios.get('/json/Countries.json')
-     .then(res => setdataCountry(res.data))
-  }, [dataCountry])
+    .then(res => setdataCountry(res.data))
+  }, [])
 
   return (
     <ThemeContext.Provider value={{dark , toggleDark , dataCountry}}>
       <div className={dark ?'light-app' : 'dark-app'}>
         <Routes>
           <Route path='/' element={<Navbar />}>
-            <Route path='/listcountry' element={<Country />}/>
+            <Route path='/listCountry' element={<Country />} />
+            <Route path=':alphaCode' element={<CountryCards />}/>
           </Route>
         </Routes>
       </div>
