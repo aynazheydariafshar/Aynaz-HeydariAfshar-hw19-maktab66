@@ -13,12 +13,16 @@ input{
     border-radius: 5px;
 }
 
-.s-dark input{
-    background-color: $light-blue;
+.s-dark{
+    input{
+        background-color: $light-blue;
+    }
 }
 
-.s-light input{
-    background-color: $light;
+.s-light{
+    input{
+        background-color: $light;
+    }
 }
 
 .icon-search{

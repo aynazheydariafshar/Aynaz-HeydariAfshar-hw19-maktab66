@@ -13,29 +13,27 @@
 .light-nav{
     background-color: $light;
     color: $black-text;
+        button{
+            background-color: transparent;
+            border: 0;
+            color: $black-text;
+            margin: 0 15px;
+            cursor: pointer;
+        }
 }
 
 .dark-nav{
     background-color: $light-blue;
     color: $light;
-}
-
-.light-nav button{
-    background-color: transparent;
-    border: 0;
-    color: $black-text;
-    margin: 0 15px;
-    cursor: pointer;
-}
-
-.dark-nav button{
-    background-color: transparent;
-    border: 0;
-    color: $light;
-    margin: 0 15px;
-    cursor: pointer;
+        button{
+            background-color: transparent;
+            border: 0;
+            color: $light;
+            margin: 0 15px;
+            cursor: pointer;
+        }
 }
 
 .navbar button:hover{
-    color: rgb(255, 0, 0);
+    color: rgb(217, 27, 93);
 }

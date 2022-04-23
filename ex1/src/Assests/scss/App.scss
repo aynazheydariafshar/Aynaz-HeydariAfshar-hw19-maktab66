@@ -2,8 +2,8 @@
 @import 'navbar';
 @import 'search';
 @import 'country';
+@import 'countryCards';
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500&display=swap');
-
 
 * {
     box-sizing: border-box;
@@ -15,11 +15,13 @@
 .dark-app{
     background-color: $light;
     color: $black-text;
+    height: 100vh;
 }
 
 .light-app{
     background-color: $dark-blue;
     color: $light;
+    height: 100vh;
 }
 
 

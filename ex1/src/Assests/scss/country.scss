@@ -27,17 +27,16 @@
     justify-content:center;
     text-decoration: none;
     color: inherit;
+        &:hover{
+            box-shadow: $shadow-hover;
+            cursor: pointer;
+        }
 }
 
 .card-style{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-}
-
-.card:hover{
-    box-shadow: $shadow-hover;
-    cursor: pointer;
 }
 
 //change direction flex for responsive
