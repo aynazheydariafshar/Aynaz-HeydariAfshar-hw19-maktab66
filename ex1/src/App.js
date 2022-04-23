@@ -2,9 +2,9 @@ import {useEffect , useState } from 'react';
 import './Assests/css/App.css';
 import Country from './Components/Country';
 import Navbar from './Components/Navbar';
-import Search from './Components/Search';
-import { ThemeContext, ThemeProvider } from './Components/ThemeContext';
+import { ThemeContext } from './Components/ThemeContext';
 import axios from 'axios';
+import { Route, Routes } from 'react-router-dom';
 
 
 function App() {
@@ -17,8 +17,7 @@ function App() {
 
   //toggle theme
   const toggleDark = (e, dark2) => {
-    let dark = !dark2
-    setDark(dark)
+    setDark(!dark2)
   }
 
   //get data from json file
@@ -30,9 +29,11 @@ function App() {
   return (
     <ThemeContext.Provider value={{dark , toggleDark , dataCountry}}>
       <div className={dark ?'light-app' : 'dark-app'}>
-        <Navbar />
-        <Search />
-        <Country />
+        <Routes>
+          <Route path='/' element={<Navbar />}>
+            <Route path='/listcountry' element={<Country />}/>
+          </Route>
+        </Routes>
       </div>
     </ThemeContext.Provider>
   );
