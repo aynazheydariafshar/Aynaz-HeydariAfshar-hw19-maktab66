@@ -1,5 +1,5 @@
 import React, { useContext , useEffect, useState} from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { ThemeContext } from './ThemeContext';
 
 const CountryCards = () => {
@@ -35,14 +35,18 @@ const CountryCards = () => {
                         <p>{`Capital : ${item.capital}`}</p>
                         <div>
                             <span>{`Border Countries : `}</span>
-                            {item.borders?.map(item => <span className='borders'>{item} </span>)}
+                            {item.borders?.map(el => 
+                            <Link to ={`/${item.alpha3Code}`}>
+                                <span className='borders'>{el}</span>
+                            </Link>
+                            )}
                         </div>
                     </div>
                     <div>
                         <p>{`Top Level Domain : ${item.topLevelDomain}`}</p>
                         <p>{`Currencies : ${item.currencies[0].name}`}</p>
                         <span>Languages :</span>
-                        {item.languages?.map(item => <span>{` ${item.name} ,`}</span>)}
+                        {item.languages?.map(el => <span>{` ${el.name} ,`}</span>)}
                     </div>    
                 </div>   
            </>

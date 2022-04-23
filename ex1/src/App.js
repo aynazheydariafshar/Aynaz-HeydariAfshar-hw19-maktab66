@@ -6,7 +6,7 @@ import { ThemeContext } from './Components/ThemeContext';
 import axios from 'axios';
 import { Route, Routes } from 'react-router-dom';
 import CountryCards from './Components/CountryCards';
-
+import BodyBackgroundColor  from 'react-body-backgroundcolor'
 
 function App() {
 
@@ -29,14 +29,16 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{dark , toggleDark , dataCountry}}>
-      <div className={dark ?'light-app' : 'dark-app'}>
-        <Routes>
-          <Route path='/' element={<Navbar />}>
-            <Route path='/listCountry' element={<Country />} />
-            <Route path=':alphaCode' element={<CountryCards />}/>
-          </Route>
-        </Routes>
-      </div>
+      <BodyBackgroundColor backgroundColor={dark ? 'hsl(207, 26%, 17%)' : 'hsl(0, 0%, 98%)'}>
+        <div className={dark ?'light-app' : 'dark-app'}>
+          <Routes>
+            <Route path='/' element={<Navbar />}>
+              <Route path='/listCountry' element={<Country />} />
+              <Route path=':alphaCode' element={<CountryCards />}/>
+            </Route>
+          </Routes>
+        </div>
+      </BodyBackgroundColor>
     </ThemeContext.Provider>
   );
 }
