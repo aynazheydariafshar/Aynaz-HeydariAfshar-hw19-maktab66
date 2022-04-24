@@ -2,17 +2,38 @@ import React, { useContext , useState} from 'react';
 import {FaMoon , FaSun , FaSearch} from 'react-icons/fa';
 import { ThemeContext } from './ThemeContext';
 import { Link, Outlet } from "react-router-dom";
+import {MdClose, MdSearch} from 'react-icons/md';
+
 
 
 const Navbar = () => {
 
     //change Theme
-    const {dark , toggleDark} = useContext(ThemeContext)
-    const [query, setQuery] = useState("")
-    const dataContext = useContext(ThemeContext)
+    const {dark , toggleDark} = useContext(ThemeContext);
+    const dataContext = useContext(ThemeContext);
+    const [filterData, setfilterData] = useState([]);
+    const [wordEntered, setwordEntered] = useState("");
+
 
     //filter serach box
-   
+    const handleFilter = (e) => {
+        const searchWord = e.target.value;
+        setwordEntered(searchWord);
+        const newFilter = dataContext.dataCountry.filter(item => {
+            return item.name.toLowerCase().includes(searchWord.toLowerCase());
+        });
+
+        if(searchWord === ""){
+            setfilterData([]);
+        }else{
+            setfilterData(newFilter);
+        }
+    }
+
+    const handleCloseSearch = ()=> {
+        setfilterData([]);
+        setwordEntered("");
+    }
 
 
     return <>
@@ -25,18 +46,22 @@ const Navbar = () => {
         </div>
         <div>
             <div className={dark ? 'search s-dark' : 'search s-light'}>
-                <FaSearch className='icon-search'/>
+                {filterData.length === 0 ? <FaSearch className='icon-search'/> : <MdClose onClick={handleCloseSearch} className='icon-search'/>}
+                
                 <input 
                     type='text' 
                     name='search' 
                     placeholder='Search for a Country'
-                    onChange={e => setQuery(e.target.value)}
+                    onChange={handleFilter}
+                    value={wordEntered}
                 />
-                <div className={dark ? 'search-data search-dark' : 'search-data search-light'}>
-                    {dataContext.dataCountry?.map((item,index) => {
-                        return <Link className='link-search' to={`/${item.alpha3Code}`}>{item.name}<br/></Link>
-                    })}
-                </div>
+                {filterData.length !== 0 && (
+                    <div className={dark ? 'search-data search-dark' : 'search-data search-light'}>
+                        {filterData?.slice(0,15).map(item => {
+                            return <Link className='link-search' to={`/${item.alpha3Code}`}>{item.name}<br/></Link>
+                        })}
+                    </div>
+                )}
             </div>
         </div>
         <Outlet />
