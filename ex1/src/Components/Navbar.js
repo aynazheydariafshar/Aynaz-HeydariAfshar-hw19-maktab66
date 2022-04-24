@@ -1,8 +1,8 @@
 import React, { useContext , useState} from 'react';
 import {FaMoon , FaSun , FaSearch} from 'react-icons/fa';
 import { ThemeContext } from './ThemeContext';
-import { Link, Outlet } from "react-router-dom";
-import {MdClose, MdSearch} from 'react-icons/md';
+import { Link, Outlet ,useSearchParams } from "react-router-dom";
+import {MdClose} from 'react-icons/md';
 
 
 
@@ -12,13 +12,13 @@ const Navbar = () => {
     const {dark , toggleDark} = useContext(ThemeContext);
     const dataContext = useContext(ThemeContext);
     const [filterData, setfilterData] = useState([]);
-    const [wordEntered, setwordEntered] = useState("");
+    const [search, setSearch] = useSearchParams();
 
 
     //filter serach box
     const handleFilter = (e) => {
         const searchWord = e.target.value;
-        setwordEntered(searchWord);
+        setSearch({ name : searchWord});
         const newFilter = dataContext.dataCountry.filter(item => {
             return item.name.toLowerCase().includes(searchWord.toLowerCase());
         });
@@ -32,7 +32,7 @@ const Navbar = () => {
 
     const handleCloseSearch = ()=> {
         setfilterData([]);
-        setwordEntered("");
+        setSearch("");
     }
 
 
@@ -53,7 +53,7 @@ const Navbar = () => {
                     name='search' 
                     placeholder='Search for a Country'
                     onChange={handleFilter}
-                    value={wordEntered}
+                    value={search.get('name')}
                 />
                 {filterData.length !== 0 && (
                     <div className={dark ? 'search-data search-dark' : 'search-data search-light'}>

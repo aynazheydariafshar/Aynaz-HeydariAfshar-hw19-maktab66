@@ -35,6 +35,14 @@
     }
 }
 
+.l-light{
+    color: $black-text;
+}
+
+.l-dark{
+    color: $light;
+}
+
 //change direction flex for responsive
 @media screen and (max-width: 800px) {
     .card-detailes{

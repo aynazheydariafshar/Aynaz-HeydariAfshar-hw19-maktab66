@@ -191,6 +191,14 @@ input {
   color: rgb(217, 27, 93);
 }
 
+.l-light {
+  color: hsl(200deg, 15%, 8%);
+}
+
+.l-dark {
+  color: hsl(0deg, 0%, 98%);
+}
+
 @media screen and (max-width: 800px) {
   .card-detailes {
     flex-direction: column;

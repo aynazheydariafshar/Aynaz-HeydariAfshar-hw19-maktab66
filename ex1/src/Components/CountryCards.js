@@ -36,7 +36,7 @@ const CountryCards = () => {
                         <div>
                             <span>{`Border Countries : `}</span>
                             {item.borders?.map(el => 
-                                <Link className='link-borders' to={`/`}>{el}</Link>
+                                <Link className={dataContex.dark ? 'link-borders l-dark' : 'link-borders l-light'} to={`/`}>{el}</Link>
                             )}
                         </div>
                     </div>
