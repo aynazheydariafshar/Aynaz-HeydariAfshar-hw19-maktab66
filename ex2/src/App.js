@@ -1,9 +1,11 @@
-import './App.css';
+import { CssBaseline } from '@mui/material';
+import Navbar from './Components/Navbar';
 
 function App() {
   return (
-    <div className="App">
-     
+    <div>
+     <CssBaseline />
+     <Navbar />
     </div>
   );
 }
