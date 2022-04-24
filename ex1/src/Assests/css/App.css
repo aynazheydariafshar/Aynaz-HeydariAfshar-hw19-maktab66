@@ -63,6 +63,37 @@ input {
   left: 40px;
 }
 
+.search-data {
+  padding: 10px;
+  width: 450px;
+  height: 200px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 5px 8px 0px;
+  overflow: hidden;
+  overflow-y: auto;
+  position: absolute;
+  top: 70px;
+  left: 70px;
+  z-index: 999;
+}
+.search-data .link-search {
+  text-decoration: none;
+  color: inherit;
+}
+
+.search-data::-webkit-scrollbar {
+  display: none;
+}
+
+.search-light {
+  background-color: hsl(0deg, 0%, 98%);
+  color: hsl(200deg, 15%, 8%);
+}
+
+.search-dark {
+  background-color: hsl(209deg, 23%, 22%);
+  color: hsl(0deg, 0%, 98%);
+}
+
 .country-img {
   width: 100%;
   height: 100%;
@@ -137,8 +168,6 @@ input {
 .link-borders {
   color: inherit;
   text-decoration: none;
-}
-.link-borders .borders {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 5px 8px 0px;
   margin: 0px 2px;
   padding: 0px 15px;

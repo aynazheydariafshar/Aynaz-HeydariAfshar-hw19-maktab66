@@ -30,3 +30,34 @@ input{
     bottom: 45px;
     left: 40px;
 }
+
+.search-data{
+    padding: 10px;
+    width: 450px;
+    height: 200px;
+    box-shadow: $shadow;
+    overflow: hidden;
+    overflow-y: auto;
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    z-index: 999;
+    .link-search{
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.search-data::-webkit-scrollbar {
+    display: none;
+}
+
+.search-light{
+    background-color: $light;
+    color: $black-text;
+}
+
+.search-dark{
+    background-color: $light-blue;
+    color: $light;
+}
