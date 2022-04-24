@@ -6,7 +6,7 @@ import {MdClose} from 'react-icons/md';
 
 
 
-const Navbar = () => {
+const Navbar = ({onchangefilter}) => {
 
     //change Theme
     const {dark , toggleDark} = useContext(ThemeContext);
@@ -44,7 +44,7 @@ const Navbar = () => {
                 <button onClick={e => toggleDark(e,dark)}>{dark ? 'Dark Mode' : 'Light Mode'}</button>
             </div>
         </div>
-        <div>
+        <div className='search-div-select'>
             <div className={dark ? 'search s-dark' : 'search s-light'}>
                 {filterData.length === 0 ? <FaSearch className='icon-search'/> : <MdClose onClick={handleCloseSearch} className='icon-search'/>}
                 
@@ -62,7 +62,17 @@ const Navbar = () => {
                         })}
                     </div>
                 )}
-            </div>
+                <select
+                    className={dark ?'light-app' : 'dark-app'}
+                    aria-label="Filter Countries By Region">
+                        <option value="All">Filter By Region</option>
+                        <option value="Africa">Africa</option>
+                        <option value="Americas">America</option>
+                        <option value="Asia">Asia</option>
+                        <option value="Europe">Europe</option>
+                        <option value="Oceania">Oceania</option>
+                </select>
+            </div>    
         </div>
         <Outlet />
     </>

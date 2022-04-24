@@ -4,6 +4,13 @@
     position: relative;
 }
 
+select{
+    float: right;
+    margin: 30px;
+    padding: 5px;
+}
+
+
 input{
     padding: 10px 40px;
     margin: 30px;
@@ -61,7 +68,6 @@ input{
             text-decoration: none;
             display: flex;
             width: 100%;
-            height: 50px;
             align-items: center;
             padding: 10px;
             color: inherit;

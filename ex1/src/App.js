@@ -16,6 +16,7 @@ function App() {
   //data from json file
   const [dataCountry , setdataCountry] = useState([])
 
+
   //toggle theme
   const toggleDark = (e, dark2) => {
     setDark(!dark2)
@@ -28,7 +29,7 @@ function App() {
   }, [])
 
   return (
-    <ThemeContext.Provider value={{dark , toggleDark , dataCountry}}>
+    <ThemeContext.Provider value={{dark , toggleDark , dataCountry }}>
       <BodyBackgroundColor backgroundColor={dark ? 'hsl(207, 26%, 17%)' : 'hsl(0, 0%, 98%)'}>
         <div className={dark ?'light-app' : 'dark-app'}>
           <Routes>

@@ -43,6 +43,42 @@
     color: $light;
 }
 
+.flex-card{
+    display: flex;
+    flex-direction: column;
+}
+
+.div-btn-back{
+    position: relative;
+    .btn-back{
+        background-color: transparent;
+        border: none;
+        box-shadow: $shadow;
+        padding:2px 30px;
+        font-size: 20px;
+        margin-left: 30px;
+        &:hover{
+            cursor: pointer;
+            box-shadow: $shadow-hover;
+        }
+    }
+    
+    .icon-back{
+        position: absolute;
+        left: 35px;
+        bottom: 11px;
+    }
+}
+
+.b-light{
+    color: $light;
+}
+
+.b-dark{
+    color: $black-text;
+}
+
+
 //change direction flex for responsive
 @media screen and (max-width: 800px) {
     .card-detailes{
