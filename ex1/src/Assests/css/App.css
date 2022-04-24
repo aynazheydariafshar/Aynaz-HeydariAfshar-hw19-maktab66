@@ -44,6 +44,12 @@ select {
   float: right;
   margin: 30px;
   padding: 5px;
+  border: none;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 5px 8px 0px;
+}
+select:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 input {
