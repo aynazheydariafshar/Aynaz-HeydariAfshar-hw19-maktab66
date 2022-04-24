@@ -24,8 +24,28 @@
         }
 }
 
-.borders{
-    box-shadow: $shadow;
-    margin:0px 2px;
-    padding:0px 15px;
+.link-borders{
+    color: inherit;
+    text-decoration: none;
+    .borders{
+        box-shadow: $shadow;
+        margin:0px 2px;
+        padding:0px 15px;
+    }
+    &:hover{
+        color: rgb(217, 27, 93);
+    }
+}
+
+//change direction flex for responsive
+@media screen and (max-width: 800px) {
+    .card-detailes{
+        flex-direction: column;
+    }
+    .p-card{
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    
 }

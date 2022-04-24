@@ -1,5 +1,5 @@
 import React, { useContext , useEffect, useState} from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, NavLink, useNavigate, useParams } from 'react-router-dom';
 import { ThemeContext } from './ThemeContext';
 
 const CountryCards = () => {
@@ -7,6 +7,8 @@ const CountryCards = () => {
     const dataContex = useContext(ThemeContext)
     const dataParams = useParams()
     const [objCountry , setobjCountry] = useState()
+    const [objBorders , setobjBorders] = useState()
+    const navigate = useNavigate()
 
     //find country when click on card
     const findCountry = () => {
@@ -36,9 +38,9 @@ const CountryCards = () => {
                         <div>
                             <span>{`Border Countries : `}</span>
                             {item.borders?.map(el => 
-                            <Link to ={`/${item.alpha3Code}`}>
-                                <span className='borders'>{el}</span>
-                            </Link>
+                                <Link className='link-borders' to={`/`}>
+                                    <span className='borders'>{el}</span>
+                                </Link>
                             )}
                         </div>
                     </div>
